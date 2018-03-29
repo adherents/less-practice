@@ -1,5 +1,23 @@
-@color: coral;
+@import 'partials/params';
+@import 'partials/mixins';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-h1 {
-    color: @color;
+html, body {
+    .clean;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: @font-color;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    .clean;
+}
+
+a {
+    text-decoration: none;
+}
+
+.view-port {
+    width: @view-port;
+    margin: 0 auto;
 }
