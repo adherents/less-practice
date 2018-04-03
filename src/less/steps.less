@@ -1,0 +1,71 @@
+@import 'partials/params';
+@import 'partials/mixins';
+
+@brd-radius: 5px;
+
+#steps {
+    padding: 50px 0;
+    text-align: center;
+
+    & .tiles {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+
+        & .tile {
+            display: flex;
+            flex-direction: column;
+            width: 28%;
+
+            & .header {
+                margin-bottom: 5px;
+                padding: 10px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-size: 20px;
+                background-color: @yellow-color;
+                font-weight: bold;
+                border-top-left-radius: @brd-radius;
+                border-top-right-radius: @brd-radius;
+
+                & span {
+                    font-size: 28px;
+                }
+            }
+
+            & .content {
+                margin-bottom: 5px;
+                padding: 20px;
+                text-align: left;
+                background-color: @khaki;
+                border-bottom-left-radius: @brd-radius;
+                border-bottom-right-radius: @brd-radius;
+                flex-grow: 1;
+
+                & p {
+                    font-size: 14px;
+                    margin-left: 10px;
+                    margin-bottom: 15px;
+                    line-height: 1.3;
+                    font-weight: bold;
+                }
+
+                & ul {
+                    .clean;
+                    padding: 10px 0 0 33px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-top: -15px;
+
+                    & li {
+                        line-height: 1.6;
+                    }
+                }
+
+                & .red {
+                    color: @red-color;
+                }
+            }
+        }
+    }
+}
